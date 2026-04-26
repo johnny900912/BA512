@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Team 3 BA512</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="hero">
+    <nav class="navbar">
+        <div class="brand">Team 3 BA512</div>
+        <div class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#loan-tool">Loan Tool</a>
+            <a href="#comparison">Comparison</a>
+            <a href="#solution">Solution</a>
+      </div>
+    </nav>
+    
+    <div class="hero-content">
+        <p class="eyebrow">JP Morgan</p>
+        <h1>Helping Customer Borrow with Confidence</h1>
+        <p class="hero-text">
+            A one-page site that helps customers understand borrow cost, compare loan options. and make better decisions.
+        </p>
+        <a href="#loan-tool" class="primary-button">Monthly payment</a>
+     </div>
+    </header>
+    <main>
+        <section id="problem" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Business Challenge</p>
+                <h2>The Problem</h2>
+                <p>When Interest rate rise, borrowing become more expensive</p>
+            </div>
+            <div class="statement-card">
+                <h3>Why this matter</h3>
+                <p>JP Morgan needs clear customer communication and  pratical digital toolkit
+                    to help customer understand how interest rate affect monthly payments may rise.
+                </p>
+            </div>
+            <div class="trend-card">
+  <div class="trend-header">
+    <div>
+      <p class="eyebrow">Interest Rate Trend</p>
+      <h3>Higher Rates Create More Pressure</h3>
+    </div>
+    <span class="trend-badge">2021–2024 From JP Morgan Data</span>
+  </div>
+
+  <div class="bar-chart">
+    <div class="bar-item">
+      <div class="bar" style="height: 38%;"></div>
+      <p>2021</p>
+      <span>3.25%</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" style="height: 88%;"></div>
+      <p>2022</p>
+      <span>7.5%</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" style="height: 100%;"></div>
+      <p>2023</p>
+      <span>8.5%</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" style="height: 88%;"></div>
+      <p>2024</p>
+      <span>7.5%</span>
+    </div>
+  </div>
+
+  <p class="trend-note">
+    As rates increase, monthly payments become more expensive and customers may feel more hesitant to borrow.
+  </p>
+</div>
+        </section>
+
+        <!----Insights-->
+        <section id="insights" class="section muted-section">
+            <div class="section-heading">
+                <p class="eyebrow">Customer Insights</p>
+                <h2>How high interest affect customer borrowers</h2>
+            </div>
+            <!--Card-->
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="card-number">01</span>
+                    <h3>Higher Borrowing Costs</h3>
+                    <p>When interest rates increase, loans become more expensive and monthly payments may rise</p>
+                </article>
+                  <div class="card-grid">
+                <article class="info-card">
+                    <span class="card-number">02</span>
+                    <h3>Customer Hesitation</h3>
+                    <p>Customers may delay borrowing because they are unsure whether they can afford the loan</p>
+                </article>
+                   <article class="info-card">
+                    <span class="card-number">03</span>
+                    <h3>Need for Transparency</h3>
+                    <p>Clear information about loan options can reduce confusion and build customer trust</p>
+                </article>
+            <!---Card end-->
+            </div>
+        </section>
+        <section id="loan-tool" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Tool</p>
+        <h2>Simple Loan Payment Estimator</h2>
+        <p>Customers can estimate their monthly payment before applying for a loan.</p>
+      </div>
+
+      <div class="tool-card">
+        <div class="input-group">
+          <label for="amount">Loan Amount ($)</label>
+          <input type="number" id="amount" value="10000" />
+        </div>
+
+        <div class="input-group">
+          <label for="rate">Interest Rate (%)</label>
+          <input type="number" id="rate" value="7" step="0.1" />
+        </div>
+
+        <div class="input-group">
+          <label for="years">Loan Term (Years)</label>
+          <input type="number" id="years" value="3" />
+        </div>
+
+        <div class="result-box">
+          <p>Estimated Monthly Payment</p>
+          <h3 id="payment">$309</h3>
+
+
+          <div class="mood-box">
+            <span id="mood-face">🙂</span>
+            <p id="mood-text">Customer Feeling: Comfortable</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison" class="section muted-section">
+      <div class="section-heading">
+        <p class="eyebrow">Loan Options</p>
+        <h2>Loan Option Comparison</h2>
+        <p>This comparison helps customers choose a loan option based on stability, flexibility, and risk.</p>
+      </div>
+      <div class="filter-buttons">
+        <button onclick="filterLoans('all')">All Options</button>
+        <button onclick="filterLoans('stable')">Stable Options</button>
+        <button onclick="filterLoans('flexible')">Flexible Options</button>
+        <button onclick="filterLoans('fast')">Faster Options</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Loan Option</th>
+              <th>Interest Type</th>
+              <th>Customer Benefit</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-type="stable">
+              <td>Fixed Rate Loan</td>
+              <td>Stable rate</td>
+              <td>Predictable monthly payments</td>
+              <td>Customers who want stability</td>
+            </tr>
+            <tr data-type="flexible">
+              <td>Variable Rate Loan</td>
+              <td>Rate may change</td>
+              <td>Possible lower starting rate</td>
+              <td>Customers comfortable with risk</td>
+            </tr>
+            <tr data-type="fast">
+              <td>Short-Term Loan</td>
+              <td>Higher monthly payment</td>
+              <td>Pay off debt faster</td>
+              <td>Customers who want lower total interest</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="solution" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Recommended Deliverable</p>
+        <h2>Our Solution</h2>
+        <p>The Customer Loan Toolkit improves transparency and supports better borrowing decisions.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="info-card">
+          <span class="card-number">A</span>
+          <h3>Educate Customers</h3>
+          <p>Explain interest rates, monthly payments, and loan terms in simple language.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">B</span>
+          <h3>Reduce Hesitation</h3>
+          <p>Help customers understand costs before they apply, making borrowing less stressful.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">C</span>
+          <h3>Support the Bank</h3>
+          <p>Improve customer trust, communication, and long-term lending performance.</p>
+        </article>
+      </div>
+      <!---KPI-->
+      <div class="kpi-box">
+        <h3>How this solution support goals</h3>
+        <div class="kpi-buttons">
+          <button onclick="showKPI('trust')">Customer trust</button>
+          <button onclick="showKPI('loan')">loan growth</button>
+        </div>
+        <p id="kpi-result">select a KPI to see how team 3 solution support JP Morgan </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Team 3 BA512</p>
+  </footer>
+
+  <script>
+    const amountInput = document.getElementById("amount");
+    const rateInput = document.getElementById("rate");
+    const yearsInput = document.getElementById("years");
+    const paymentOutput = document.getElementById("payment");
+    const moodFace = document.getElementById("mood-face");
+    const moodText = document.getElementById("mood-text");
+
+    function calculatePayment() {
+      const principal = Number(amountInput.value);
+      const annualRate = Number(rateInput.value) / 100;
+      const years = Number(yearsInput.value);
+      const monthlyRate = annualRate / 12;
+      const numberOfPayments = years * 12;
+
+      if (principal <= 0 || annualRate <= 0 || years <= 0) {
+        paymentOutput.textContent = "$0";
+        return;
+      }
+
+      const monthlyPayment =
+        principal * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments) /
+        (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+
+      paymentOutput.textContent = "$" + monthlyPayment.toFixed(0);
+      const interestRate = Number(rateInput.value);
+
+        if (interestRate < 5) {
+     moodFace.textContent = "😊";
+  moodText.textContent = "Customer Feeling: Confident";
+   } else if (interestRate < 8) {
+    moodFace.textContent = "🙂";
+    moodText.textContent = "Customer Feeling: Cautious";
+  } else if (interestRate < 11) {
+    moodFace.textContent = "😟";
+    moodText.textContent = "Customer Feeling: Worried";
+  } else {
+    moodFace.textContent = "😢";
+   moodText.textContent = "Customer Feeling: Very Stressed";
+  }
+}
+
+
+  function filterLoans(type) {
+  const rows = document.querySelectorAll("tbody tr");
+
+  rows.forEach(function(row) {
+    if (type === "all" || row.dataset.type === type) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
+}
+
+function showKPI(kpi) {
+  const result = document.getElementById("kpi-result");
+
+  if (kpi === "trust") {
+    result.textContent =
+      "Customer Trust: Clear loan information can reduce confusion and help customers feel more confident.";
+  } else if (kpi === "loan") {
+    result.textContent =
+      "Loan Growth: When customers understand costs better, they may feel more comfortable applying for loans.";
+  } 
+}
+
+    amountInput.addEventListener("input", calculatePayment);
+    rateInput.addEventListener("input", calculatePayment);
+    yearsInput.addEventListener("input", calculatePayment);
+
+    calculatePayment();
+  </script>
+</body>
+</html>
